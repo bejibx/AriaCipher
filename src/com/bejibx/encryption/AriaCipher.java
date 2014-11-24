@@ -87,7 +87,7 @@ public class AriaCipher
                    0x04, (byte) 0xe8, (byte) 0xc9, 0x0e
     };
 
-    /*
+   /*
     * 2.4.2.  Substitution Layers --------------------------------------------------------------------------------------
     *
     *    ARIA has two types of substitution layers that alternate between
@@ -340,7 +340,8 @@ public class AriaCipher
         return result;
     }
 
-    /* 2.4.1.  Round Functions -----------------------------------------------------------------------------------------
+   /*
+    * 2.4.1.  Round Functions -----------------------------------------------------------------------------------------
     *
     *   There are two types of round functions for ARIA.  One is called an
     *   odd round function and is denoted by FO.  It takes as input a pair
@@ -374,7 +375,8 @@ public class AriaCipher
         return A(SL2(XOR(D, RK)));
     }
 
-    /* 2.4.3.  Diffusion Layer -----------------------------------------------------------------------------------------
+    /*
+     * 2.4.3.  Diffusion Layer -----------------------------------------------------------------------------------------
      *
      *    Diffusion layer A is an algorithm that takes a 16-byte string x0 ||
      *    x1 || ... || x15 as input and outputs a 16-byte string
@@ -431,7 +433,7 @@ public class AriaCipher
         }
     }
 
-    /*
+   /*
     * 2.2.  Key Scheduling Part ----------------------------------------------------------------------------------------
     *
     *    Let K denote a master key of 128, 192, or 256 bits.  Given the master
@@ -591,7 +593,7 @@ public class AriaCipher
         mDK[mNumberRounds] = mEK[0];
     }
 
-    /*
+   /*
     * 2.3.1.  Encryption Process ---------------------------------------------------------------------------------------
     *
     * 2.3.1.1.  Encryption for 128-Bit Keys
@@ -690,7 +692,7 @@ public class AriaCipher
         }
     }
 
-    /*
+   /*
     * 2.3.2.  Decryption Process ---------------------------------------------------------------------------------------
     *
     *   The decryption process of ARIA is the same as the encryption process
@@ -710,8 +712,7 @@ public class AriaCipher
         scheduleKey(key);
     }
 
-    /* Utility functions -----------------------------------------------------------------------------------------------
-    */
+   // Utility functions ------------------------------------------------------------------------------------------------
 
     /**
      * XOR each byte from first array with corresponding byte from second. If second array size less than first, than
